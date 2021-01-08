@@ -2,7 +2,7 @@ FROM openjdk:11
 
 RUN apt-get update && apt install git && apt-get install maven -y
 RUN git clone https://github.com/Julia1999000/web_laba5.git -b master
-RUN mvn -f web_laba5/pom.xml clean package
+RUN mvn -f web_laba5/pom.xml clean package -Dmaven.test.skip=true
 
 EXPOSE 8080
 

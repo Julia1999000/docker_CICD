@@ -16,7 +16,7 @@ services:
       context: .
       dockerfile: back/DockerFile
     environment:
-      DB_URL: db:5432/rgz
+      DB_URL: db:5439/rgz
       DB_USERNAME: postgres
       DB_PASSWORD: postgres
     ports:
@@ -26,7 +26,7 @@ services:
   db:
     image: postgres
     ports:
-      - 5432:5432
+      - 5439:5439
     volumes:
       - ./data:/var/lib/postgresql/data
     environment:
